@@ -1,6 +1,6 @@
 import React from "react";
 
-function PopUpWithForm(props) {
+function PopupWithForm(props) {
   return (
     <>
       <div
@@ -28,4 +28,4 @@ function PopUpWithForm(props) {
   );
 }
 
-export default PopUpWithForm;
+export default PopupWithForm;

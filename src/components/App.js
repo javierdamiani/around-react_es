@@ -3,7 +3,7 @@ import React from "react";
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
-import PopUpWithForm from "./PopUpWithForm";
+import PopupWithForm from "./PopupWithForm";
 import api from "../utils/api";
 import ImagePopup from "./ImagePopup";
 
@@ -86,7 +86,7 @@ function App() {
         cards={cards}
       />
       <Footer />
-      <PopUpWithForm
+      <PopupWithForm
         name="profile"
         title="Editar Perfil"
         isOpen={isEditProfilePopUpOpen}
@@ -120,9 +120,9 @@ function App() {
             <p id="popupAbout-error" className="popup__error"></p>
           </label>
         </>
-      </PopUpWithForm>
+      </PopupWithForm>
 
-      <PopUpWithForm
+      <PopupWithForm
         name="image_profile"
         title="Cambiar foto de perfil"
         isOpen={isEditAvatarPopUpOpen}
@@ -142,9 +142,9 @@ function App() {
             className="popup__error popup-input-image-error"
           ></p>
         </label>
-      </PopUpWithForm>
+      </PopupWithForm>
 
-      <PopUpWithForm
+      <PopupWithForm
         name="card"
         title="Nuevo lugar"
         isOpen={isAddPlacePopUpOpen}
@@ -174,14 +174,14 @@ function App() {
           />
           <p id="linkImg-error" className="popup__error"></p>
         </label>
-      </PopUpWithForm>
+      </PopupWithForm>
 
-      <PopUpWithForm
+      <PopupWithForm
         name="delete_card"
         title="¿Estás seguro/a?"
         isOpen={isDeleteCardPopUpOpen}
         onClose={closeAllPopups}
-      ></PopUpWithForm>
+      ></PopupWithForm>
 
       <ImagePopup
       card={selectedCard}
