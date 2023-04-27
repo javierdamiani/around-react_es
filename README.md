@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Proyecto 10: Alrededor de los Estados Unidos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+By. Javier Damiani
 
-## Available Scripts
+Introducción:
 
-In the project directory, you can run:
+El presente proyecto consistió en desarrollar una página web con un formato de tarjetas, en el cual el usuario es capaz de editar el nombre así como la ocupación del perfil. Asimismo, puede añadir tarjetas a través del botón con el símbolo "+". 
 
-### `npm start`
+La página web es responsive pues se adapta a diferentes tipos de pantallas.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Tecnologías utilizadas: 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+HTML5
+CSS
+JavaScript
+Figma
 
-### `npm test`
+Se utilizó la tecnología HTML y CSS para la maquetación de la página web, basándonos en lo propuesto por el proyecto a través de Figma. Se hizo uso de JavaScript para poder darle interacción al usuario con la Web. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Actualización del proyecto al 03/08/2023 (8 de Marzo del 2023):
 
-### `npm run build`
+Se organizaron los archivos JavaScript en la carpeta "scripts". Se utilizó la metodología de la programación orientada a objetos para así reestructurar el código, que quede más ordenado y que sea más amigable su lectura. Se crearon los archivos Card.js y FormValidator.js que son la clase creadora de tarjetas y la clase que realiza la validación de formularios respectivamente.
+Por último se creó el arhivo utils.js en donde se almacenan los controladores de eventos (Event Listeners) y las funciones que abren y cierran el modal de las tarjetas.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+En la actualización se realizó el PopUp para borrar las imágenes, las mismas que solo podrán ser eliminadas por el id del usuario que la subió. Se conectó el archivo al API, se gestionaron las solicitudes necesarias para que las tarjetas sean tomadas desde el API. 
+Se reorganizaron los archivos, se aplicó webpack para empaquetar el proyecto. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Queda pendiente lanzar la página web a través de github pages con la conexión al servidor, debido a que el link de abajo permite visualizar el proyecto hasta la penúltima actualización. Se realizará una vez el proyecto sea aprobado. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+El link para visitar la Web es el siguiente: https://javierdamiani.github.io/web_project_4_esp/
+El link al repositorio de gitHub es:  https://github.com/javierdamiani/web_project_4_esp
