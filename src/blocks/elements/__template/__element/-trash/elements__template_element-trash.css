@@ -1,0 +1,11 @@
+.elements__template_element-trash {
+  position: absolute;
+  z-index: 4;
+  right: 15px;
+  top: 18px;
+}
+.elements__template_element-trash:hover {
+  opacity: 0.5;
+  transition: opacity 0.5s linear;
+  cursor: pointer;
+}
