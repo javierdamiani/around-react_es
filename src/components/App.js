@@ -93,27 +93,26 @@ function App() {
         onClose={closeAllPopups}
       >
         <>
-          <label for="popup-input-name" className="popup__field">
+          <label className="popup__field">
             <input
               type="text"
               name="name"
               placeholder="Nombre"
-              value="Nombre"
               id="popupName"
-              minlength="2"
-              maxlength="40"
+              minLength="2"
+              maxLength="40"
               className="popup__input popup__input_type_name"
               required
             />
             <span id="popupName-error" className="popup__error"></span>
           </label>
-          <label for="popup-input-about" className="popup__field">
+          <label className="popup__field">
             <input
               type="text"
               name="about"
               placeholder="Acerca de mi"
-              minlength="2"
-              maxlength="200"
+              minLength="2"
+              maxLength="200"
               id="popupAbout"
               className="popup__input popup__input_type_about"
               required
@@ -129,7 +128,7 @@ function App() {
         isOpen={isEditAvatarPopUpOpen}
         onClose={closeAllPopups}
       >
-        <label for="popup-input-image" className="popup__field">
+        <label className="popup__field">
           <input
             type="url"
             name="image-link"
@@ -151,20 +150,20 @@ function App() {
         isOpen={isAddPlacePopUpOpen}
         onClose={closeAllPopups}
       >
-        <label for="popup-input-title" className="popup__field">
+        <label className="popup__field">
           <input
             id="title"
             name="title"
             placeholder="Título"
-            minlength="2"
-            maxlength="30"
+            minLength="2"
+            maxLength="30"
             type="text"
             className="popup__input"
             required
           />
           <p id="title-error" className="popup__error"></p>
         </label>
-        <label for="popup-input-link" className="popup__field">
+        <label className="popup__field">
           <input
             type="url"
             name="image-link"
