@@ -2,8 +2,11 @@ import React from "react";
 import editBtn from "../images/edit-button.svg";
 import addBtn from "../images/vector_plus.svg";
 import Card from "./Card";
+import { CurrentUserContext } from "../contexts/CurrentContext";
+import { useContext } from "react";
 
 function Main(props) {
+  const currentUser = React.useContext(CurrentUserContext);
 
   return (
     <>
@@ -11,7 +14,7 @@ function Main(props) {
         <div className="profile">
           <div className="profile__avatar-container">
             <img
-              src={props.userAvatar}
+              src={currentUser.avatar}
               alt="Imagen de una persona sonriente"
               className="profile__avatar"
             />
@@ -31,10 +34,10 @@ function Main(props) {
             />
             <div className="profile__info-text">
               <p className="profile__info-explorer" id="profAbout">
-                {props.userDescription}
+                {currentUser.about}
               </p>
               <p className="profile__info-name" id="profName">
-                {props.userName}
+                {currentUser.name}
               </p>
             </div>
           </div>
@@ -47,16 +50,16 @@ function Main(props) {
           </button>
         </div>
         <div className="elements">
-
-          {props.cards.map((card) => { return (
+          {props.cards.map((card) => {
+            return (
               <Card
                 key={card._id}
                 card={card}
                 onCardClick={props.onCardClick}
                 onDeleteCard={props.onDeleteCard}
               />
-              )})}
-
+            );
+          })}
         </div>
       </main>
     </>
