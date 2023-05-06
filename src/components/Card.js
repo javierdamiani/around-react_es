@@ -29,6 +29,11 @@ function Card(props) {
   function handleClick() {
     props.onCardClick(props.card);
   }
+
+  function handleLikeClick() {
+    props.onCardLike(props.card);
+  }
+
   return (
     <>
       <div
@@ -49,6 +54,7 @@ function Card(props) {
             alt="Botón de corazón para dar like"
             className={cardLikeButtonClassName}
             id="likeBtn"
+            onClick={handleLikeClick}
           />
           <p className="elements__template_element-counter" id="heartCounter">
             {props.card.likes ? props.card.likes.length : 0}
