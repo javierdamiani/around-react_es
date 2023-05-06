@@ -34,6 +34,10 @@ function Card(props) {
     props.onCardLike(props.card);
   }
 
+  function handleDeleteClick() {
+    props.onCardDelete(props.card)
+  }
+
   return (
     <>
       <div
@@ -46,7 +50,7 @@ function Card(props) {
           alt="Imagen de un contenedor de basura para eliminar la tarjeta"
           className={cardDeleteButtonClassName}
           id="trashCan"
-          onClick={props.onDeleteCard}
+          onClick={handleDeleteClick}
         />
         <div>
           <img
