@@ -7,6 +7,7 @@ import PopupWithForm from "./PopupWithForm";
 import api from "../utils/api";
 import ImagePopup from "./ImagePopup";
 import { CurrentUserContext } from "../contexts/CurrentContext";
+import EditProfilePopUp from "./EditProfilePopUp";
 
 function App() {
   const [isEditProfilePopUpOpen, setIsEditProfilePopUpOpen] =
@@ -106,41 +107,11 @@ function App() {
           cards={cards}
         />
         <Footer />
-        <PopupWithForm
-          name="profile"
-          title="Editar Perfil"
+
+        <EditProfilePopUp
           isOpen={isEditProfilePopUpOpen}
           onClose={closeAllPopups}
-        >
-          <>
-            <label className="popup__field">
-              <input
-                type="text"
-                name="name"
-                placeholder="Nombre"
-                id="popupName"
-                minLength="2"
-                maxLength="40"
-                className="popup__input popup__input_type_name"
-                required
-              />
-              <span id="popupName-error" className="popup__error"></span>
-            </label>
-            <label className="popup__field">
-              <input
-                type="text"
-                name="about"
-                placeholder="Acerca de mi"
-                minLength="2"
-                maxLength="200"
-                id="popupAbout"
-                className="popup__input popup__input_type_about"
-                required
-              />
-              <p id="popupAbout-error" className="popup__error"></p>
-            </label>
-          </>
-        </PopupWithForm>
+        />
 
         <PopupWithForm
           name="image_profile"
