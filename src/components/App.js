@@ -9,6 +9,7 @@ import ImagePopup from "./ImagePopup";
 import { CurrentUserContext } from "../contexts/CurrentContext";
 import EditProfilePopUp from "./EditProfilePopUp";
 import EditAvatarPopup from "./EditAvatarPopup";
+import AddPlacePopup from "./AddPlacePopup";
 
 function App() {
   const [isEditProfilePopUpOpen, setIsEditProfilePopUpOpen] =
@@ -103,13 +104,22 @@ function App() {
       .catch((err) => console.log(err));
   }
 
-  function handleUpdateAvatar(avatar){
+  function handleUpdateAvatar({avatar}){
     api
     .setUserAvatar(avatar)
     .then((data)=> {
-      console.log("hola");
       setCurrentUser(data);
       setIsEditAvatarPopUpOpen(false);
+    })
+    .catch((err) => console.log(err))
+  }
+
+  function handleAddPlaceSubmit({name, link}){
+    api
+    .addCard({name, link})
+    .then((newCard) => {
+      setCards([newCard, ...cards]);
+      setIsAddPlacePopUpOpen(false);
     })
     .catch((err) => console.log(err))
   }
@@ -142,37 +152,12 @@ function App() {
           onUpdateAvatar={handleUpdateAvatar}
         />
 
-        <PopupWithForm
-          name="card"
-          title="Nuevo lugar"
-          isOpen={isAddPlacePopUpOpen}
-          onClose={closeAllPopups}
-        >
-          <label className="popup__field">
-            <input
-              id="title"
-              name="title"
-              placeholder="Título"
-              minLength="2"
-              maxLength="30"
-              type="text"
-              className="popup__input"
-              required
-            />
-            <p id="title-error" className="popup__error"></p>
-          </label>
-          <label className="popup__field">
-            <input
-              type="url"
-              name="image-link"
-              className="popup__input"
-              id="linkImg"
-              placeholder="Enlace a la imagen"
-              required
-            />
-            <p id="linkImg-error" className="popup__error"></p>
-          </label>
-        </PopupWithForm>
+        <AddPlacePopup 
+        isOpen={isAddPlacePopUpOpen}
+        onClose={closeAllPopups}
+        onAddPlaceSubmit={handleAddPlaceSubmit}
+        />
+        
 
         <PopupWithForm
           name="delete_card"
