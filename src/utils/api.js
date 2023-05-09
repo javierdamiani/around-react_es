@@ -44,6 +44,13 @@ class Api {
     return this._makeRequest("DELETE", `${this._baseUrl}/cards/${cardId}`);
   }
 
+  setUserInfo({ name, about }) {
+    return this._makeRequest("PATCH", `${this._baseUrl}/users/me`, {
+      name,
+      about,
+    });
+  }
+
   setUserAvatar(avatar) {
     return this._makeRequest("PATCH", `${this._baseUrl}/users/me/avatar`, {
       avatar,

@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import PopupWithForm from "./PopupWithForm";
 import { CurrentUserContext } from "../contexts/CurrentContext";
 
-function EditProfilePopUp({ isOpen, onClose }) {
+function EditProfilePopUp(props) {
   const [name, setName] = React.useState("");
   const [description, setDescription] = React.useState("");
 
@@ -13,13 +13,25 @@ function EditProfilePopUp({ isOpen, onClose }) {
     setDescription(currentUser.about);
   }, [currentUser]);
 
+  function handleSubmit(e) {
+    // Evita que el navegador navegue hacia la dirección del formulario
+    e.preventDefault();
+
+    // Pasa los valores de los componentes gestionados al controlador externo
+    props.onUpdateUser({
+      name,
+      about: description,
+    });
+  }
+
   return (
     <>
       <PopupWithForm
         name="profile"
         title="Editar Perfil"
-        isOpen={isOpen}
-        onClose={onClose}
+        isOpen={props.isOpen}
+        onClose={props.onClose}
+        onSubmit={handleSubmit}
       >
         <>
           <label className="popup__field">

@@ -8,11 +8,12 @@ import api from "../utils/api";
 import ImagePopup from "./ImagePopup";
 import { CurrentUserContext } from "../contexts/CurrentContext";
 import EditProfilePopUp from "./EditProfilePopUp";
+import EditAvatarPopup from "./EditAvatarPopup";
 
 function App() {
   const [isEditProfilePopUpOpen, setIsEditProfilePopUpOpen] =
     React.useState(false);
-  const [isEditAvatarPopUpOpen, setIsEditAvatarPopUpOpen] =
+  const [isEditAvatarPopupOpen, setIsEditAvatarPopUpOpen] =
     React.useState(false);
   const [isAddPlacePopUpOpen, setIsAddPlacePopUpOpen] = React.useState(false);
   const [isDeleteCardPopUpOpen, setIsDeleteCardPopUpOpen] =
@@ -92,6 +93,16 @@ function App() {
       .catch((err) => console.log(err));
   }
 
+  function handleUpdateUser({ name, about }) {
+    api
+      .setUserInfo({ name, about })
+      .then((data) => {
+        setCurrentUser(data);
+        setIsEditProfilePopUpOpen(false);
+      })
+      .catch((err) => console.log(err));
+  }
+
   return (
     <div className="page">
       <CurrentUserContext.Provider value={currentUser}>
@@ -111,29 +122,13 @@ function App() {
         <EditProfilePopUp
           isOpen={isEditProfilePopUpOpen}
           onClose={closeAllPopups}
+          onUpdateUser={handleUpdateUser}
         />
 
-        <PopupWithForm
-          name="image_profile"
-          title="Cambiar foto de perfil"
-          isOpen={isEditAvatarPopUpOpen}
+        <EditAvatarPopup
+          isOpen={isEditAvatarPopupOpen}
           onClose={closeAllPopups}
-        >
-          <label className="popup__field">
-            <input
-              type="url"
-              name="image-link"
-              placeholder="Imagen URL"
-              id="popUpInputImage"
-              className="popup__input"
-              required
-            />
-            <p
-              id="popUpInputImage-error"
-              className="popup__error popup-input-image-error"
-            ></p>
-          </label>
-        </PopupWithForm>
+        />
 
         <PopupWithForm
           name="card"
