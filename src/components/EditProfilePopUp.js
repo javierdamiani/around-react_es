@@ -43,7 +43,7 @@ function EditProfilePopUp(props) {
               minLength="2"
               maxLength="40"
               className="popup__input popup__input_type_name"
-              value={name}
+              value={name || ''}
               onChange={(e) => setName(e.target.value)}
               required
             />
@@ -58,7 +58,7 @@ function EditProfilePopUp(props) {
               maxLength="200"
               id="popupAbout"
               className="popup__input popup__input_type_about"
-              value={description}
+              value={name || ''}
               onChange={(e) => setDescription(e.target.value)}
               required
             />

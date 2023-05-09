@@ -2,6 +2,7 @@ import React from "react";
 import closeIcon from "../images/close_icon.svg";
 
 function ImagePopup(props) {
+
   return (
     <>
       <div
