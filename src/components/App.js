@@ -7,7 +7,7 @@ import PopupWithForm from "./PopupWithForm";
 import api from "../utils/api";
 import ImagePopup from "./ImagePopup";
 import { CurrentUserContext } from "../contexts/CurrentContext";
-import EditProfilePopUp from "./EditProfilePopUp";
+import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import AddPlacePopup from "./AddPlacePopup";
 
@@ -140,7 +140,7 @@ function App() {
         />
         <Footer />
 
-        <EditProfilePopUp
+        <EditProfilePopup
           isOpen={isEditProfilePopUpOpen}
           onClose={closeAllPopups}
           onUpdateUser={handleUpdateUser}

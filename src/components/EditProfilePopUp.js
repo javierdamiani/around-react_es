@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import PopupWithForm from "./PopupWithForm";
 import { CurrentUserContext } from "../contexts/CurrentContext";
 
-function EditProfilePopUp(props) {
+function EditProfilePopup(props) {
   const [name, setName] = React.useState("");
   const [description, setDescription] = React.useState("");
 
@@ -58,7 +58,7 @@ function EditProfilePopUp(props) {
               maxLength="200"
               id="popupAbout"
               className="popup__input popup__input_type_about"
-              value={name || ''}
+              value={description || ''}
               onChange={(e) => setDescription(e.target.value)}
               required
             />
@@ -70,4 +70,4 @@ function EditProfilePopUp(props) {
   );
 }
 
-export default EditProfilePopUp;
+export default EditProfilePopup;
