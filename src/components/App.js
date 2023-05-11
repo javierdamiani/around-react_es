@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import PopupWithForm from "./PopupWithForm";
 import api from "../utils/api";
 import ImagePopup from "./ImagePopup";
-import { CurrentUserContext } from "../contexts/CurrentContext";
+import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import AddPlacePopup from "./AddPlacePopup";

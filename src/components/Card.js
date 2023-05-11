@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import trashCan from "../images/trashCan.svg";
 import likeBtn from "../images/like_button.svg";
 import rectangle from "../images/Rectangle.png";
-import { CurrentUserContext } from "../contexts/CurrentContext";
+import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
 function Card(props) {
   const currentUser = React.useContext(CurrentUserContext);
