@@ -32,8 +32,7 @@ function EditProfilePopup(props) {
         isOpen={props.isOpen}
         onClose={props.onClose}
         onSubmit={handleSubmit}
-      >
-        <>
+      />
           <label className="popup__field">
             <input
               type="text"
@@ -64,8 +63,6 @@ function EditProfilePopup(props) {
             />
             <p id="popupAbout-error" className="popup__error"></p>
           </label>
-        </>
-      </PopupWithForm>
     </>
   );
 }
