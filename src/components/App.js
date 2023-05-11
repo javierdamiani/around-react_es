@@ -20,7 +20,7 @@ function App() {
   const [isDeleteCardPopUpOpen, setIsDeleteCardPopUpOpen] =
     React.useState(false);
 
-  const [selectedCard, setSelectedCard] = React.useState("{}");
+  const [selectedCard, setSelectedCard] = React.useState({});
   const [isSelectedCardOpen, setIsSelectedCardOpen] = React.useState(false);
 
   const [cards, setCards] = React.useState([]);
@@ -158,7 +158,6 @@ function App() {
         onAddPlaceSubmit={handleAddPlaceSubmit}
         />
         
-
         <PopupWithForm
           name="delete_card"
           title="¿Estás seguro/a?"

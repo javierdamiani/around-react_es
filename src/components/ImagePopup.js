@@ -1,18 +1,18 @@
 import React from "react";
 import closeIcon from "../images/close_icon.svg";
 
-function ImagePopup(props) {
+function ImagePopup({isOpen, card, onClose}) {
 
   return (
     <>
       <div
-        className={`"popup popup_img ${props.isOpen ? "popup__opened" : ""}`}
+        className={`"popup popup_img ${isOpen ? "popup__opened" : ""}`}
         id="modalPopUp"
       >
         <div className="popup__img">
           <div>
             <img
-              src={props.card.link}
+              src={card.link}
               alt=""
               className="popup__img-background"
               id="cardPopUp"
@@ -22,9 +22,9 @@ function ImagePopup(props) {
               alt="Equis para cerrar el formulario"
               className="popup__img-close"
               id="closeImgBtn"
-              onClick={props.onClose}
+              onClick={onClose}
             />
-            <p className="popup__img-title" id="popUpImgTitle">{props.card.name} </p>
+            <p className="popup__img-title" id="popUpImgTitle">{card.name} </p>
           </div>
         </div>
       </div>
