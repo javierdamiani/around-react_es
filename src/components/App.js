@@ -104,24 +104,24 @@ function App() {
       .catch((err) => console.log(err));
   }
 
-  function handleUpdateAvatar({avatar}){
+  function handleUpdateAvatar({ avatar }) {
     api
-    .setUserAvatar(avatar)
-    .then((data)=> {
-      setCurrentUser(data);
-      setIsEditAvatarPopUpOpen(false);
-    })
-    .catch((err) => console.log(err))
+      .setUserAvatar(avatar)
+      .then((data) => {
+        setCurrentUser(data);
+        setIsEditAvatarPopUpOpen(false);
+      })
+      .catch((err) => console.log(err));
   }
 
-  function handleAddPlaceSubmit({name, link}){
+  function handleAddPlaceSubmit({ name, link }) {
     api
-    .addCard({name, link})
-    .then((newCard) => {
-      setCards([newCard, ...cards]);
-      setIsAddPlacePopUpOpen(false);
-    })
-    .catch((err) => console.log(err))
+      .addCard({ name, link })
+      .then((newCard) => {
+        setCards([newCard, ...cards]);
+        setIsAddPlacePopUpOpen(false);
+      })
+      .catch((err) => console.log(err));
   }
 
   return (
@@ -152,12 +152,13 @@ function App() {
           onUpdateAvatar={handleUpdateAvatar}
         />
 
-        <AddPlacePopup 
-        isOpen={isAddPlacePopUpOpen}
-        onClose={closeAllPopups}
-        onAddPlaceSubmit={handleAddPlaceSubmit}
+        <AddPlacePopup
+          isOpen={isAddPlacePopUpOpen}
+          onClose={closeAllPopups}
+          onAddPlaceSubmit={handleAddPlaceSubmit}
         />
         
+
         <PopupWithForm
           name="delete_card"
           title="¿Estás seguro/a?"
