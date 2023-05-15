@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/%7Baround-react_es%7D/static/css/main.541ccb27.css",
-    "main.js": "/%7Baround-react_es%7D/static/js/main.342603de.js",
+    "main.css": "/%7Baround-react_es%7D/static/css/main.ee0a935f.css",
+    "main.js": "/%7Baround-react_es%7D/static/js/main.d70e1897.js",
     "static/js/787.33e33395.chunk.js": "/%7Baround-react_es%7D/static/js/787.33e33395.chunk.js",
     "static/media/Inter.var.woff2?v=3.19": "/%7Baround-react_es%7D/static/media/Inter.var.c2fe3cb2b7c746f7966a.woff2",
     "static/media/Inter-italic.var.woff2?v=3.19": "/%7Baround-react_es%7D/static/media/Inter-italic.var.30807be7abc48ba8c73c.woff2",
@@ -25,15 +25,15 @@
     "static/media/likeBtn_active.svg": "/%7Baround-react_es%7D/static/media/likeBtn_active.f8482d28867cec189b08.svg",
     "static/media/close_icon.svg": "/%7Baround-react_es%7D/static/media/close_icon.dac22d3e7f8c8059add2bbe27811c860.svg",
     "static/media/edit-button.svg": "/%7Baround-react_es%7D/static/media/edit-button.af236f6cf67005f1d7aa37d370e5df9d.svg",
-    "static/media/pencil.svg": "/%7Baround-react_es%7D/static/media/pencil.a086f758840ae814ecde.svg",
+    "static/media/pencil.svg": "/%7Baround-react_es%7D/static/media/pencil.ae1a976ddb506239e9f0.svg",
     "static/media/vector_plus.svg": "/%7Baround-react_es%7D/static/media/vector_plus.bed8c136e13907f5eefb86d62a5fe29e.svg",
     "static/media/line.svg": "/%7Baround-react_es%7D/static/media/line.1ccd37d0e35d3b5d81642d6734447e08.svg",
-    "main.541ccb27.css.map": "/%7Baround-react_es%7D/static/css/main.541ccb27.css.map",
-    "main.342603de.js.map": "/%7Baround-react_es%7D/static/js/main.342603de.js.map",
+    "main.ee0a935f.css.map": "/%7Baround-react_es%7D/static/css/main.ee0a935f.css.map",
+    "main.d70e1897.js.map": "/%7Baround-react_es%7D/static/js/main.d70e1897.js.map",
     "787.33e33395.chunk.js.map": "/%7Baround-react_es%7D/static/js/787.33e33395.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.541ccb27.css",
-    "static/js/main.342603de.js"
+    "static/css/main.ee0a935f.css",
+    "static/js/main.d70e1897.js"
   ]
 }
