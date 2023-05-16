@@ -27,5 +27,5 @@ Se reorganizaron los archivos, se aplicó webpack para empaquetar el proyecto.
 
 Queda pendiente lanzar la página web a través de github pages con la conexión al servidor, debido a que el link de abajo permite visualizar el proyecto hasta la penúltima actualización. Se realizará una vez el proyecto sea aprobado. 
 
-El link para visitar la Web es el siguiente: https://javierdamiani.github.io/web_project_4_esp/
-El link al repositorio de gitHub es:  https://github.com/javierdamiani/web_project_4_esp
+El link para visitar la Web es el siguiente: https://javierdamiani.github.io/around-react_es/
+El link al repositorio de gitHub es:  https://github.com/javierdamiani/around-react_es
